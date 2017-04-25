@@ -34,9 +34,10 @@ npm install jsencrypt --save-dev
 
 # 使用
 var jsencrypt = require('jsencrypt');
-var str = 'xxxxx';
+var plainText = 'xxxxx';
+var encryptPK = 'XXXXXXXXX';
 var encrypt = new jsencrypt.JSEncrypt();
-encrypt.setPublicKey(this.encryptPK);
+encrypt.setPublicKey(encryptPK);
 var encrypted = encrypt.encrypt(plainText);
 
 # md5 加密
@@ -50,3 +51,5 @@ var md5Str = md5('xxxxx');
 5、[docs for vuex](http://vuex.vuejs.org/zh-cn/intro.html)
 
 6、[docs for vue-router](http://router.vuejs.org/zh-cn/)
+
+7、vue-resource for ajax request
