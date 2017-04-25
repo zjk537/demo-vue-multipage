@@ -28,25 +28,25 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 4、jsencrypt rsa 加密插件
 
-	``` bash
-	# rsa加密
-   	npm install jsencrypt --save-dev
+``` bash
+# rsa加密
+npm install jsencrypt --save-dev
 
-   	# 使用
-   	var jsencrypt = require('jsencrypt');
-   	var str = 'xxxxx';
-   	var encrypt = new jsencrypt.JSEncrypt();
-    encrypt.setPublicKey(this.encryptPK);
-    var encrypted = encrypt.encrypt(plainText);
+# 使用
+var jsencrypt = require('jsencrypt');
+var str = 'xxxxx';
+var encrypt = new jsencrypt.JSEncrypt();
+encrypt.setPublicKey(this.encryptPK);
+var encrypted = encrypt.encrypt(plainText);
 
-    # md5 加密
-    npm install md5 --save-dev
-	
-	# 使用
-	var md5 = require('md5');
-	var md5Str = md5('xxxxx');
-	```
-	
+# md5 加密
+npm install md5 --save-dev
+
+# 使用
+var md5 = require('md5');
+var md5Str = md5('xxxxx');
+```
+
 5、[docs for vuex](http://vuex.vuejs.org/zh-cn/intro.html)
 
 6、[docs for vue-router](http://router.vuejs.org/zh-cn/)
