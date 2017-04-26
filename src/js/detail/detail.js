@@ -3,7 +3,7 @@ import Detail from 'src/views/detail/detail'
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: 'app',
   template: '<Detail/>',
   components: { Detail }
 })

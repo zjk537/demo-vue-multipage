@@ -61,8 +61,8 @@ var md5Str = md5('xxxxx');
 
 ``` bash
 new HtmlWebpackPlugin({
-	filename:'views/index.html',
-	template:'xxxxx.html',
+	filename:'./src/views/index/index.html',
+	template:'./src/views/layout.html',
 	inject:true
 })
 
@@ -86,4 +86,12 @@ new Vue({
   components: { Index }
 })
 
+```
+3、图片中使用 注意页面图片的引入方式
+
+``` bash
+# 相对路径可以被webpack解析
+<img src="../../img/logo.png">
+# 静态资源 不被webpack解析
+<img src="/static/img/logo.png">
 ```

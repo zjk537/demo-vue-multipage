@@ -3,7 +3,7 @@ import Info from 'src/views/detail/info'
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: 'app',
   template: '<Info/>',
   components: { Info }
 })

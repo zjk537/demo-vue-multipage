@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-    <img src="./images/logo.png">
+  <div class="app">
+    <img src="src/img/logo.png">
     <div>详情内容222222</div>
   </div>
 </template>
 
 <script>
-  import 'assets/css/reset.css';
+  import 'static/css/reset.css';
   import Hello from 'components/Hello/Hello'
 
   export default {
@@ -18,7 +18,7 @@
 </script>
 
 <style>
-  #app {
+  .app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -36,19 +36,24 @@ module.exports = merge(baseWebpackConfig, {
   ]
 })
 
-var pages = utils.getEntry(['./src/views/*.vue','./src/views/**/*.vue']);
-
+var pages = utils.getEntry(['./src/views/*.vue','./src/views/**/*.vue','./src/views/*.html','./src/views/**/*.html']);
+console.log('pages:' + JSON.stringify(pages));
 for (var pathname in pages) {
-
-  // html 没有对应的js 文件时，不用webpack打包
-  var entryKey = pathname.replace('views','js');
-  var isInject = module.exports.entry.hasOwnProperty(entryKey);
+  if(pathname == 'layout'){
+    continue;
+  }
+  var inject = false;
+  var tpHtml = pages[pathname]; 
+  if(tpHtml.lastIndexOf('.html') === -1){
+    inject = true;
+    tpHtml = 'src/views/layout.html';
+  }
   // 配置生成的html文件，定义路径等
   var conf = {
     favicon:'favicon.ico',
     filename: pathname + '.html',
-    template: 'src/views/layout.html',//pages[pathname],   // 模板路径
-    inject: true,              // js插入位置
+    template: tpHtml,//pages[pathname],   // 模板路径
+    inject: inject,              // js插入位置
     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
     chunksSortMode: 'dependency'
   };
