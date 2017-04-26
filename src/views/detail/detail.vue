@@ -10,7 +10,7 @@
   import Hello from 'components/Hello/Hello'
 
   export default {
-    name: 'app',
+    name: 'Detail',
     components: {
       Hello
     }

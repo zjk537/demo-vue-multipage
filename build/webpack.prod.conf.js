@@ -85,7 +85,7 @@ if (config.build.productionGzip) {
 
 module.exports = webpackConfig
 
-var pages = getEntry(['./src/views/*.html','./src/views/**/*.html']);
+var pages = utils.getEntry(['./src/views/*.vue','./src/views/**/*.vue']);
 
 for (var pathname in pages) {
 
@@ -97,7 +97,7 @@ for (var pathname in pages) {
   var conf = {
     favicon:'favicon.ico',
     filename: pathname + '.html',
-    template: pages[pathname],   // 模板路径
+    template: 'src/views/layout.html',   // 模板路径
     inject: true,              // js插入位置
     minify: { //压缩HTML文件
       removeComments: true,//移除HTML中的注释

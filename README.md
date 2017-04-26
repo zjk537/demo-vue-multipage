@@ -53,3 +53,37 @@ var md5Str = md5('xxxxx');
 6、[docs for vue-router](http://router.vuejs.org/zh-cn/)
 
 7、vue-resource for ajax request
+
+
+
+### layout 模板使用
+1、HtmlWebpackPlugin 参数 filename 与 entry key 对应时，页面引入对应entry的js
+
+``` bash
+new HtmlWebpackPlugin({
+	filename:'views/index.html',
+	template:'xxxxx.html',
+	inject:true
+})
+
+module.exports.entry = {
+	'views/index': './src/js/index/index.js',
+	'views/detail': './src/js/detail/detail.js'
+}
+
+# 这样webpack打包后 index.html 加载了index.js, 没有加载detail.js
+```
+
+2、js 中使用模板
+
+``` bash
+import Vue from 'vue'
+import Index from 'src/views/index/index'
+
+new Vue({
+  el: '#app',
+  template: '<Index/>', // 名称要与组件文件名相同，不区分大小写
+  components: { Index }
+})
+
+```

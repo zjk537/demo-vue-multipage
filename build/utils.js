@@ -72,7 +72,8 @@ exports.getEntry = function(globPath){
         basename = path.basename(entry,path.extname(entry));
         if(entry.split('/').length > 4){
           tmp = entry.split('/').splice(-3);
-          pathname = tmp.splice(0,1) + '/' + basename;// 正确输出js 和 html的路径
+          // pathname = tmp.splice(0,1) + '/' + basename;// 正确输出js 和 html的路径
+          pathname = 'views/' + basename;// 正确输出js 和 html的路径
           entries[pathname] = entry;
         } else {
           entries[basename] = entry;

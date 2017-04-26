@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./images/logo.png">
-    <hello></hello>
+    <div>详情内容222222</div>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
   import Hello from 'components/Hello/Hello'
 
   export default {
-    name: 'app',
+    name: 'Detail',
     components: {
       Hello
     }
