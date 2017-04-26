@@ -37,7 +37,6 @@ module.exports = merge(baseWebpackConfig, {
 })
 
 var pages = utils.getEntry(['./src/views/*.vue','./src/views/**/*.vue','./src/views/*.html','./src/views/**/*.html']);
-console.log('pages:' + JSON.stringify(pages));
 for (var pathname in pages) {
   if(pathname == 'layout'){
     continue;

@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <img src="src/img/logo.png">
+    <img src="../../img/logo.png">
     <div>详情内容222222</div>
   </div>
 </template>

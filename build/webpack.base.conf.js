@@ -10,7 +10,8 @@ var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
 var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
-var entries = utils.getEntry(['./src/js/*.js', './src/js/**/*.js']); // 获得入口js文件
+var entries = utils.getEntry(['./src/entry/*.js', './src/entry/**/*.js']); // 获得入口js文件
+delete entries['base'];// remove base entry 
 module.exports = {
   entry: entries,
   output: {

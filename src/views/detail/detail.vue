@@ -1,23 +1,19 @@
 <template>
   <div class="app">
-    <img src="src/img/logo.png">
+    <img src="../../img/logo.png">
     <div>详情内容</div>
   </div>
 </template>
 
 <script>
-  import 'static/css/reset.css';
-  import Hello from 'components/Hello/Hello'
-
   export default {
     name: 'Detail',
     components: {
-      Hello
     }
   }
 </script>
 
-<style>
+<style lang="scss">
   .app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

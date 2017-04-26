@@ -54,6 +54,7 @@ var md5Str = md5('xxxxx');
 
 7、vue-resource for ajax request
 
+# base.js 引入公共资源， http请求拦截器
 
 
 ### layout 模板使用
@@ -78,12 +79,12 @@ module.exports.entry = {
 
 ``` bash
 import Vue from 'vue'
-import Index from 'src/views/index/index'
+import App from 'src/views/index/index'
 
 new Vue({
   el: '#app',
-  template: '<Index/>', // 名称要与组件文件名相同，不区分大小写
-  components: { Index }
+  template: '<App/>', // components 名称
+  components: { App }
 })
 
 ```
@@ -95,3 +96,9 @@ new Vue({
 # 静态资源 不被webpack解析
 <img src="/static/img/logo.png">
 ```
+
+### 项目支持功能
+
+1、views目录下 所有.vue页面 最终都会生成一个经压缩后的html文件，包含了webpack处理之后的js
+2、views目录下 所有.html页面（除layout.html）都会生成经压缩后的html文件，不包含webpack处理之后的js
+3、entry目录下 base.js为所有入口js的基础类，主要处理公共资源引入，http请求拦截

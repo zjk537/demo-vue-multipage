@@ -25,7 +25,8 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import 'src/scss/index/index.scss';
   .app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
