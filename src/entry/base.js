@@ -8,7 +8,7 @@ import Mint from 'mint-ui'
 import Toast from 'mint-ui'
 import 'static/css/reset.css'
 import 'mint-ui/lib/style.css'
-import 'static/iconfont/iconfont.css'
+import 'src/scss/iconfont/iconfont.css'
 import 'static/js/resetfontsize.js'
 Vue.use(Mint)
 

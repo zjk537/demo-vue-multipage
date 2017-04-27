@@ -6,7 +6,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-// var CleanPlugin = require('clean-webpack-plugin')//webpack插件，用于清除目录文件
+var CleanPlugin = require('clean-webpack-plugin')//webpack插件，用于清除目录文件
 var env = config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
@@ -35,7 +35,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         warnings: false
       }
     }),
-    // new CleanPlugin(['../dist']), //清空生成目录
+    new CleanPlugin(['../dist'],{allowExternal:true}), //清空生成目录
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
